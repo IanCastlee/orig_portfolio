@@ -1,0 +1,121 @@
+.post {
+  border: 0.0005rem solid rgb(49, 45, 45);
+  width: 58%;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(49, 45, 45);
+
+  h3 {
+    color: #ffcfef;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+
+    .project-icon {
+      font-size: 1.125rem;
+      margin-right: 3px;
+    }
+  }
+
+  .post-card {
+    background-color: #1e2219;
+
+    width: 100%;
+    border: 0.0005rem solid rgb(49, 45, 45);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    .post-card-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .project-name-icon {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        .h3-project {
+          font-size: 1.25rem;
+          color: #ffcfef;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        span {
+          font-size: 0.625rem;
+          color: gray;
+          margin: 0;
+        }
+      }
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        gap: 5px;
+        width: 60%;
+
+        .btn-show {
+          background-color: transparent;
+          border: 1px solid rgb(44, 41, 41);
+          height: 25px;
+          color: #ffcfef;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 3px;
+          font-size: 0.625rem;
+          padding: 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .view-icon {
+            color: #ffcfef;
+            font-size: 0.875rem;
+            margin-right: 5px;
+          }
+
+          &:hover {
+            background-color: blue;
+          }
+
+          &.techused {
+            background-color: blue;
+          }
+          &.feature {
+            background-color: blue;
+          }
+          &.visit {
+            background-color: blue;
+          }
+        }
+
+        .modal-box-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: 2;
+        }
+      }
+    }
+
+    .description {
+      width: 100%;
+      margin-top: 10px;
+      border-top: 0.0005rem solid rgb(49, 45, 45);
+      padding-top: 20px;
+      margin-bottom: 10px;
+      p {
+        color: #ffcfef;
+        font-weight: 200;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

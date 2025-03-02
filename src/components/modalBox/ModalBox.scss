@@ -1,0 +1,43 @@
+.modal-box {
+  width: 300px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 0.0005rem solid rgb(49, 45, 45);
+  position: absolute;
+  background-color: rgb(49, 45, 45);
+  top: 30px;
+  right: 0;
+  z-index: 3;
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+
+    h3 {
+      color: #ffcfef;
+      font-size: 0.875rem;
+    }
+  }
+
+  .content {
+    width: 100%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      li {
+        font-size: 0.75rem;
+        color: #ffcfef;
+        list-style: none;
+
+        .tech-icon {
+          color: #ffcfef;
+          font-size: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
