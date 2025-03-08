@@ -161,7 +161,7 @@ const Home = () => {
                 </h3>
 
                 <p>
-                  "I'm a 4th-year college graduating student pursuing a
+                  I'm a 4th-year college graduating student pursuing a
                   Bachelor's degree in Information Technology, specializing in
                   Full Stack Web Development. I have a strong foundation in
                   building fully functional web applications from scratch.
