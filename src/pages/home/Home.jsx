@@ -32,7 +32,7 @@ const Home = () => {
 
   const handleSendEmail = () => {
     const email = "castillo321ian@gmail.com";
-    const subject = encodeURIComponent("Inquiry from your Portfolio");
+    const subject = encodeURIComponent("Question About Your Services");
     const body = encodeURIComponent("Hello, I would like to ask about...");
 
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
