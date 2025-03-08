@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #181c14;
+  border-top: 0.0005rem solid rgb(49, 45, 45);
+  height: 40px;
+  align-items: center;
+
+  padding: 20px;
+  margin-top: 80px;
+  span {
+    color: #fff;
+    font-weight: 200;
+    font-size: 14px;
+  }
+}

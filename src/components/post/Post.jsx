@@ -19,13 +19,14 @@ const Post = () => {
   return (
     <div className="post">
       <h3>
-        <CgWebsite className="project-icon" /> Projects
+        <CgWebsite className="project-icon" />
+        Some of My Projects
       </h3>
       {projectData &&
         projectData.map((project) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="post-card"
             key={project.id}
@@ -61,7 +62,7 @@ const Post = () => {
                     _clickedID(project.id);
                   }}
                 >
-                  <IoEyeOutline className="view-icon" /> Project Tech Stack
+                  <IoEyeOutline className="view-icon" /> Project Tech Tools
                 </button>
                 <button
                   className={`btn-show ${
