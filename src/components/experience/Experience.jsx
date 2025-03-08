@@ -10,7 +10,6 @@ const Experience = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="experience"
-      id="experience"
     >
       <h3>
         <FaLaptopCode className="about-icon" /> Experience
@@ -31,7 +30,7 @@ const Experience = () => {
             <button className="year">2024</button>
             <span>{`Working on my capstone project while also taking on commission work from fellow students (Node.JS, PHP, MySQL, ReactJS, SCSS, PHP Mailer).`}</span>
           </div>
-          <div className="section">
+          <div className="section" id="stack">
             <button className="year">2023</button>
             <span>{`Started my web development journey and took on web development commissions using Laravel,MySQL,  CSS, and PHP Mailer.`}</span>
           </div>

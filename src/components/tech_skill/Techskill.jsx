@@ -9,7 +9,6 @@ const Techskill = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="techskill"
-      id="stack"
     >
       <h3>
         <FaCode className="about-icon" /> Tech Stack

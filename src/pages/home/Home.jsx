@@ -206,6 +206,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="other-info"
+                id="experience"
               >
                 <h3>
                   <MdInfoOutline className="about-icon" /> Other Information
