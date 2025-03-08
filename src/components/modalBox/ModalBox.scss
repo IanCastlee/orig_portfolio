@@ -1,10 +1,12 @@
+@import url("../../main.scss");
+
 .modal-box {
   width: 300px;
   padding: 15px;
   border-radius: 5px;
-  border: 0.0005rem solid rgb(49, 45, 45);
+  border: 0.0005rem solid var(--border-color);
   position: absolute;
-  background-color: rgb(49, 45, 45);
+  background-color: var(--card-bg-color);
   top: 30px;
   right: 0;
   z-index: 3;
@@ -15,7 +17,7 @@
     justify-content: start;
 
     h3 {
-      color: #ffcfef;
+      color: var(--primary-text-color);
       font-size: 0.875rem;
     }
   }
@@ -29,11 +31,11 @@
 
       li {
         font-size: 0.75rem;
-        color: #ffcfef;
+        color: var(--primary-text-color);
         list-style: none;
 
         .tech-icon {
-          color: #ffcfef;
+          color: var(--primary-text-color);
           font-size: 10px;
           margin-right: 10px;
         }

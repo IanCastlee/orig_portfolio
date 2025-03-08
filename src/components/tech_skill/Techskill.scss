@@ -1,13 +1,15 @@
+@import url("../../main.scss");
+
 .techskill {
-  border: 0.0005rem solid rgb(78, 77, 77);
+  border: 0.0005rem solid var(--border-color);
   border-radius: 10px;
   padding: 15px;
   width: 100%;
 
-  background-color: rgb(49, 45, 45);
+  background-color: var(--card-bg-color);
 
   h3 {
-    color: #ffcfef;
+    color: var(--primary-text-color);
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -16,6 +18,7 @@
     .about-icon {
       font-size: 1.125rem;
       margin-right: 3px;
+      color: var(--primary-text-color);
     }
   }
 
@@ -27,7 +30,8 @@
 
     .title {
       font-size: 0.75rem;
-      color: #ffcfef;
+      color: var(--primary-text-color);
+
       font-weight: 400;
       margin-bottom: 3px;
     }
@@ -42,8 +46,8 @@
         padding: 0 8px;
         border-radius: 25px;
         font-size: 0.625rem;
-        border: 0.0005rem solid rgb(78, 77, 77);
-        color: #ffcfef;
+        border: 0.0005rem solid var(--border-color);
+        color: var(--primary-text-color);
       }
     }
   }
@@ -51,15 +55,15 @@
 
 @media (max-width: 789px) {
   .techskill {
-    border: 0.0005rem solid rgb(78, 77, 77);
+    border: 0.0005rem solid var(--border-color);
     border-radius: 10px;
     padding: 15px;
     width: 100%;
 
-    background-color: rgb(49, 45, 45);
+    background-color: var(--card-bg-color);
 
     h3 {
-      color: #ffcfef;
+      color: var(--primary-text-color);
       display: flex;
       align-items: center;
       font-weight: 500;
@@ -79,7 +83,7 @@
 
       .title {
         font-size: 0.75rem;
-        color: #ffcfef;
+        color: var(--primary-text-color);
         font-weight: 400;
         margin-bottom: 3px;
       }
@@ -94,8 +98,8 @@
           padding: 0 8px;
           border-radius: 25px;
           font-size: 0.625rem;
-          border: 0.0005rem solid rgb(78, 77, 77);
-          color: #ffcfef;
+          border: 0.0005rem solid var(--border-color);
+          color: var(--primary-text-color);
         }
       }
     }

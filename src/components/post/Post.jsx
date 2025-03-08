@@ -11,6 +11,11 @@ import { useState } from "react";
 const Post = () => {
   const [showCard, setShowCard] = useState(null);
   const [clickedID, setClickedID] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const maxLength = 200;
+  const toggleReadMore = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   const _clickedID = (_id) => {
     setClickedID(_id);
@@ -62,7 +67,7 @@ const Post = () => {
                     _clickedID(project.id);
                   }}
                 >
-                  <IoEyeOutline className="view-icon" /> Project Tech Tools
+                  <IoEyeOutline className="view-icon" /> Tech Stack & Tools
                 </button>
                 <button
                   className={`btn-show ${
@@ -98,7 +103,35 @@ const Post = () => {
             </div>
 
             <div className="description">
-              <p>{project.description}</p>
+              {/* By default, `isExpand` is set to `false`.  
+   First, it checks `isExpand ?` (meaning, if `isExpand` is `true`),  
+   if YES, it displays `project.description`.  
+   However, since the default state of `isExpand` is `false`,  
+   it moves to the ELSE (`:`) condition.  
+
+   In the ELSE condition, `project.description` is sliced from index `0` to `maxLength`,  
+   and `"..."` is added at the end **only if** `project.description.length` is greater than `maxLength`.  
+   Otherwise, an empty string (`""`) is added.  
+
+   In the `toggle` function, when the user clicks the button,  
+   it switches `isExpand` between `true` and `false`.  
+   If `isExpand` is `true`, it displays "READ LESS".  
+   If `isExpand` is `false`, it displays "READ MORE".  
+*/}
+
+              {/* NOTE FOR MY FRIEND hahahhahahahhhhhhhhhhhhhhhhhhhhhhhh */}
+
+              <p>
+                {isExpanded
+                  ? project.description
+                  : project.description.slice(0, maxLength) +
+                    (project.description.length > maxLength ? "..." : "")}
+              </p>
+              {project.description.length > maxLength && (
+                <p onClick={toggleReadMore} className="read-more-btn">
+                  {isExpanded ? "Read Less" : "Read More"}
+                </p>
+              )}
             </div>
 
             <div className="post-wrapper">

@@ -1,17 +1,19 @@
+@import url("../../main.scss");
+
 .footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #181c14;
-  border-top: 0.0005rem solid rgb(49, 45, 45);
+  background-color: var(--mian-bg-color);
+  border-top: 0.0005rem solid var(--border-color);
   height: 40px;
   align-items: center;
 
   padding: 20px;
   margin-top: 80px;
   span {
-    color: #fff;
-    font-weight: 200;
-    font-size: 14px;
+    color: var(--primary-text-color);
+    font-weight: 300;
+    font-size: 0.875rem;
   }
 }

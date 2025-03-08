@@ -10,7 +10,7 @@ const ModalBox = ({ clicked, features, techstack }) => {
           {clicked === "feature"
             ? "Features"
             : clicked === "techused"
-            ? "Project Teck Stack"
+            ? "Tech Stack & Tools"
             : ""}
         </h3>
       </div>

@@ -10,7 +10,14 @@ export const projectData = [
     description: `Paubra is a web platform designed to connect skilled workers in Bulusan with individuals and businesses in need of their expertise. Whether you're looking for a reliable plumber, carpenter, electrician, or any other skilled professional, Paubra makes it easy to find the right person for the job.
        For workers, Paubra serves as a digital marketplace to showcase their skills, reach potential clients, and grow their business. By creating a profile, workers can list their expertise, share their experience, and connect with customers looking for their services.`,
     image: paubraImage,
-    features: ["Appointment System", "Hospital News Update"],
+    features: [
+      " Job Board ",
+      " Search & Filter",
+      " Worker Profiles",
+      "Ratings & Reviews",
+      "Location-Based Matching",
+      " Favorites List ",
+    ],
     techStack: ["Node.Js", "MySql", "ReactJs", "SCSS", "PHP Mailer"],
   },
   {
@@ -18,14 +25,14 @@ export const projectData = [
     name: "Bulusan Lake Explorer",
     developer: "Ian Castillo",
     description:
-      "Bulusan Lake Explorer is a web app with a self-learningchatbot, virtual tour, biodiversity search, real-time weather updates, and a booking system.",
+      "Bulusan Lake Explorer is a web app featuring a virtual tour, biodiversity search, a 5-day advanced weather forecast, a feed from Bulusan Lake visitors, an adaptive chatbot, and a booking system.",
     image: projectImage,
     features: [
-      "Self Learning Chatbot",
       "Lake Virtual Tour",
       "Biodiversity Search",
       "Lake Advanced weather update",
       "Bulusan Lake Feed",
+      "Adaptive Chatbot",
       "Booking System",
     ],
     techStack: ["NodeJs", "MySql", "ReactJs", "SCSS", "PHP Mailer", "Panoee"],

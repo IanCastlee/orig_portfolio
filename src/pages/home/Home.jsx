@@ -10,11 +10,12 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { MdInfoOutline } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { IoMaleSharp } from "react-icons/io5";
+import { MdLightMode } from "react-icons/md";
 
 import Post from "../../components/post/Post";
 import Experience from "../../components/experience/Experience";
 import Footer from "../../components/footer/Footer";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 //ICONS
 import nodeJS from "../../assets/icons/1012818_code_development_logo_nodejs_icon.png";
@@ -25,8 +26,10 @@ import tailwind from "../../assets/icons/tailwind-removebg-preview.png";
 import scss from "../../assets/icons/4375066_logo_sass_icon.png";
 import html from "../../assets/icons/317755_badge_html_html5_achievement_award_icon.png";
 import Techskill from "../../components/tech_skill/Techskill";
+import { DarkModeContext } from "../../context/Darkmode";
 
 const Home = () => {
+  const { toggleTheme } = useContext(DarkModeContext);
   const [viewProfile, setViewProfie] = useState(false);
   const [hoverTech, setHover] = useState("");
 
@@ -93,6 +96,8 @@ const Home = () => {
                   alt=""
                 />
               </motion.div>
+
+              <MdLightMode className="icon-mode" onClick={toggleTheme} />
             </div>
 
             <img
