@@ -3,7 +3,7 @@
 .home {
   width: 100%;
   height: 100%;
-  padding: 0 160px;
+  padding: 5px 160px;
   background-color: var(--mian-bg-color);
   overflow-y: auto;
   .home-container {
@@ -71,7 +71,7 @@
         width: 160px;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid gray;
+        border: 3px solid var(--dark-text-color);
         left: 60px;
         bottom: -100px;
       }
@@ -148,6 +148,9 @@
               background-color: #3674b5;
             }
           }
+          .icon-mode {
+            display: none;
+          }
         }
       }
     }
@@ -165,6 +168,7 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
+      margin-right: 20px;
 
       li {
         color: var(--secondary-text-color);
@@ -284,7 +288,7 @@
   .home {
     width: 100%;
     height: 100%;
-    padding: 0 8px;
+    padding: 8px;
     background-color: var(--mian-bg-color);
     overflow-y: auto;
     .home-container {
@@ -325,6 +329,9 @@
               }
             }
           }
+          .icon-mode {
+            display: none;
+          }
         }
 
         .profile-img {
@@ -333,7 +340,7 @@
           width: 110px;
           border-radius: 50%;
           object-fit: cover;
-          border: 3px solid gray;
+          border: 3px solid var(--dark-text-color);
           left: 20px;
           bottom: -30px;
         }
@@ -348,6 +355,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 17px;
+            width: 50%;
 
             .name {
               color: var(--primary-text-color);
@@ -358,7 +366,7 @@
 
             .position {
               color: var(--primary-text-color);
-              font-size: 18px;
+              font-size: 1rem;
               margin: 0;
               padding: 0;
               font-weight: 300;
@@ -408,8 +416,15 @@
               border: 0.0005rem solid var(--border-color);
 
               &:hover {
-                background-color: #3674b5;
+                background-color: transparent;
               }
+            }
+
+            .icon-mode {
+              display: flex;
+              font-size: 25px;
+              margin-top: 20px;
+              color: var(--primary-text-color);
             }
           }
         }
@@ -427,6 +442,7 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+        margin-right: 0;
 
         li {
           color: var(--secondary-text-color);

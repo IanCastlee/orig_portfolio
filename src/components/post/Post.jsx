@@ -22,7 +22,7 @@ const Post = () => {
   };
 
   return (
-    <div className="post">
+    <div className="post" id="project">
       <h3>
         <CgWebsite className="project-icon" />
         Some of My Projects

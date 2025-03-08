@@ -27,9 +27,10 @@ import scss from "../../assets/icons/4375066_logo_sass_icon.png";
 import html from "../../assets/icons/317755_badge_html_html5_achievement_award_icon.png";
 import Techskill from "../../components/tech_skill/Techskill";
 import { DarkModeContext } from "../../context/Darkmode";
+import { WiMoonWaxingCrescent4 } from "react-icons/wi";
 
 const Home = () => {
-  const { toggleTheme } = useContext(DarkModeContext);
+  const { toggleTheme, theme } = useContext(DarkModeContext);
   const [viewProfile, setViewProfie] = useState(false);
   const [hoverTech, setHover] = useState("");
 
@@ -40,10 +41,15 @@ const Home = () => {
 
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
-
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
-      <div className="home">
+      <div className="home" id="home">
         <div className="home-container">
           <div className="home-container-bg">
             <div className="bg-image-wrapper">
@@ -97,7 +103,14 @@ const Home = () => {
                 />
               </motion.div>
 
-              <MdLightMode className="icon-mode" onClick={toggleTheme} />
+              {theme === "light" ? (
+                <WiMoonWaxingCrescent4
+                  className="icon-mode"
+                  onClick={toggleTheme}
+                />
+              ) : (
+                <MdLightMode className="icon-mode" onClick={toggleTheme} />
+              )}
             </div>
 
             <img
@@ -137,19 +150,26 @@ const Home = () => {
                   <FaGithub className="icon" />
                   <FaFacebookMessenger className="icon" />
                 </div>
-
                 <button className="btn-contact" onClick={handleSendEmail}>
                   Send Email
                 </button>
+                {theme === "light" ? (
+                  <WiMoonWaxingCrescent4
+                    className="icon-mode"
+                    onClick={toggleTheme}
+                  />
+                ) : (
+                  <MdLightMode className="icon-mode" onClick={toggleTheme} />
+                )}{" "}
               </motion.div>
             </div>
           </div>
 
           <div className="navbar">
             <ul>
-              <li>Services</li>
-              <li>Experience</li>
-              <li>About</li>
+              <li onClick={() => scrollToSection("stack")}>Tech Stack</li>
+              <li onClick={() => scrollToSection("experience")}>Experience</li>
+              <li onClick={() => scrollToSection("project")}>Projects</li>
             </ul>
           </div>
 
