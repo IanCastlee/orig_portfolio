@@ -103,14 +103,19 @@ const Home = () => {
                 />
               </motion.div>
 
-              {theme === "light" ? (
-                <WiMoonWaxingCrescent4
-                  className="icon-mode"
-                  onClick={toggleTheme}
-                />
-              ) : (
-                <MdLightMode className="icon-mode" onClick={toggleTheme} />
-              )}
+              <div className="togglebutton-wrapper" onClick={toggleTheme}>
+                {theme === "light" ? (
+                  <WiMoonWaxingCrescent4
+                    className="icon-mode-moon"
+                    onClick={toggleTheme}
+                  />
+                ) : (
+                  <MdLightMode
+                    className="icon-mode-sun"
+                    onClick={toggleTheme}
+                  />
+                )}
+              </div>
             </div>
 
             <img
@@ -153,14 +158,19 @@ const Home = () => {
                 <button className="btn-contact" onClick={handleSendEmail}>
                   Send Email
                 </button>
-                {theme === "light" ? (
-                  <WiMoonWaxingCrescent4
-                    className="icon-mode"
-                    onClick={toggleTheme}
-                  />
-                ) : (
-                  <MdLightMode className="icon-mode" onClick={toggleTheme} />
-                )}{" "}
+                <div className="togglebutton-wrapper" onClick={toggleTheme}>
+                  {theme === "light" ? (
+                    <WiMoonWaxingCrescent4
+                      className="icon-mode-moon"
+                      onClick={toggleTheme}
+                    />
+                  ) : (
+                    <MdLightMode
+                      className="icon-mode-sun"
+                      onClick={toggleTheme}
+                    />
+                  )}
+                </div>
               </motion.div>
             </div>
           </div>
@@ -186,18 +196,18 @@ const Home = () => {
                 </h3>
 
                 <p>
-                  I'm a 4th-year college graduating student pursuing a
+                  I am a fourth-year college student graduating with a
                   Bachelor's degree in Information Technology, specializing in
                   Full Stack Web Development. I have a strong foundation in
                   building fully functional web applications from scratch.
-                  During my college years, I gained hands-on experience as a
+                  Throughout my college years, I gained hands-on experience as a
                   freelancer, developing capstone projects, simple websites, and
                   portfolios for clients. These experiences have enhanced my
                   technical skills and strengthened my ability to meet diverse
-                  requirements and deadlines. I'm passionate about transforming
-                  ideas into efficient and scalable web solutions, and I'm eager
-                  to continue learning and growing in the ever-evolving tech
-                  industry.
+                  requirements and deadlines. I am passionate about transforming
+                  ideas into efficient and scalable web solutions, and I am
+                  eager to continue learning and growing in the ever-evolving
+                  tech industry.
                 </p>
               </motion.div>
 
