@@ -85,27 +85,36 @@
           }
 
           &:hover {
-            background-color: blue;
-            color: var(--mian-bg-color);
+            background-color: #3674b5;
+            color: #fff;
+
+            .view-icon {
+              color: #fff;
+            }
           }
 
           &.techused {
-            background-color: blue;
-            color: var(--mian-bg-color);
-          }
-          &.feature {
-            background-color: blue;
-            color: var(--mian-bg-color);
-          }
-          &.visit {
-            background-color: blue;
-            color: var(--mian-bg-color);
-          }
-          &:hover {
-            color: var(--mian-bg-color);
+            background-color: #3674b5;
+            color: #fff;
 
             .view-icon {
-              color: var(--mian-bg-color);
+              color: #fff;
+            }
+          }
+          &.feature {
+            background-color: #3674b5;
+            color: #fff;
+
+            .view-icon {
+              color: #fff;
+            }
+          }
+          &.visit {
+            background-color: #3674b5;
+            color: #fff;
+
+            .view-icon {
+              color: #fff;
             }
           }
         }
@@ -150,7 +159,7 @@
   }
 }
 
-@media (max-width: 789px) {
+@media (max-width: 768px) {
   .post {
     // border: 0.0005rem solid rgb(49, 45, 45);
     border: 0.0005rem solid var(--border-color);
@@ -240,17 +249,37 @@
             }
 
             &:hover {
-              background-color: blue;
+              background-color: #3674b5;
+              color: #fff;
+
+              .view-icon {
+                color: #fff;
+              }
             }
 
             &.techused {
-              background-color: blue;
+              background-color: #3674b5;
+              color: #fff;
+
+              .view-icon {
+                color: #fff;
+              }
             }
             &.feature {
-              background-color: blue;
+              background-color: #3674b5;
+              color: #fff;
+
+              .view-icon {
+                color: #fff;
+              }
             }
             &.visit {
-              background-color: blue;
+              background-color: #3674b5;
+              color: #fff;
+
+              .view-icon {
+                color: #fff;
+              }
             }
           }
 

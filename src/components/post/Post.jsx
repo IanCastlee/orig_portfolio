@@ -6,9 +6,12 @@ import { CgWebsite } from "react-icons/cg";
 import { IoEyeOutline } from "react-icons/io5";
 import { projectData } from "../Projects";
 import ModalBox from "../modalBox/ModalBox";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DarkModeContext } from "../../context/Darkmode";
 
 const Post = () => {
+  const { handleShowMessage } = useContext(DarkModeContext);
+
   const [showCard, setShowCard] = useState(null);
   const [clickedID, setClickedID] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -78,6 +81,7 @@ const Post = () => {
                   onClick={() => {
                     setShowCard("visit");
                     _clickedID(project.id);
+                    handleShowMessage();
                   }}
                 >
                   <IoEyeOutline className="view-icon" /> Visit Site

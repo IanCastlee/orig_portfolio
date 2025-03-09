@@ -30,7 +30,7 @@ import { DarkModeContext } from "../../context/Darkmode";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
 
 const Home = () => {
-  const { toggleTheme, theme } = useContext(DarkModeContext);
+  const { toggleTheme, theme, handleShowMessage } = useContext(DarkModeContext);
   const [viewProfile, setViewProfie] = useState(false);
   const [hoverTech, setHover] = useState("");
 
@@ -152,8 +152,11 @@ const Home = () => {
                 className="socmed-button"
               >
                 <div className="socmed">
-                  <FaGithub className="icon" />
-                  <FaFacebookMessenger className="icon" />
+                  <FaGithub className="icon" onClick={handleShowMessage} />
+                  <FaFacebookMessenger
+                    className="icon"
+                    onClick={handleShowMessage}
+                  />
                 </div>
                 <button className="btn-contact" onClick={handleSendEmail}>
                   Send Email
