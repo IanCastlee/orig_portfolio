@@ -16,8 +16,6 @@ export const DarkmodeProvider = ({ children }) => {
     }, 3000);
   };
 
-  console.log("SHOW : ", showMessage);
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
