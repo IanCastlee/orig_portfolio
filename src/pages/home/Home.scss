@@ -672,8 +672,8 @@
             flex-wrap: wrap;
 
             img {
-              width: 40px;
-              height: 40px;
+              width: 35px;
+              height: 35px;
               background-color: rgba(0, 0, 0, 0.5);
               padding: 10px;
               border-radius: 7px;
@@ -694,9 +694,9 @@
           position: absolute;
           height: 110px;
           width: 110px;
-          border-radius: 50%;
+          border-radius: 20px;
           object-fit: cover;
-          border: 3px solid var(--dark-text-color);
+          border: 5px solid var(--dark-text-color);
           left: 20px;
           bottom: -30px;
         }
