@@ -120,7 +120,7 @@ const Post = () => {
    In the `toggle` function, when the user clicks the button,  
    it switches `isExpand` between `true` and `false`.  
    If `isExpand` is `true`, it displays "READ LESS".  
-   If `isExpand` is `false`, it displays "READ MORE".  
+   If `isExpand` is `false`, it displays "READ MORE". 
 */}
 
               {/* NOTE FOR MY FRIEND hahahhahahahhhhhhhhhhhhhhhhhhhhhhhh */}
