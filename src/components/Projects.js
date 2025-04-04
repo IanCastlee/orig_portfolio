@@ -1,7 +1,7 @@
 import projectImage from "../assets/project_images/bulusanlakeweb.png";
 import ighImage from "../assets/project_images/Subheading (9).pnghh.png";
 import paubraImage from "../assets/project_images/pubra_project.png";
-import sheep from "../assets/project_images/sheep (2).png";
+import sheep from "../assets/project_images/sheepproj.png";
 
 export const projectData = [
   {
