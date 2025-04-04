@@ -1,6 +1,7 @@
 import projectImage from "../assets/project_images/bulusanlakeweb.png";
 import ighImage from "../assets/project_images/Subheading (9).pnghh.png";
 import paubraImage from "../assets/project_images/pubra_project.png";
+import sheep from "../assets/project_images/sheep (2).png";
 
 export const projectData = [
   {
@@ -18,7 +19,7 @@ export const projectData = [
       "Location-Based Matching",
       " Favorites List ",
     ],
-    techStack: ["Node.Js", "MySql", "ReactJs", "SCSS", "PHP Mailer"],
+    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer"],
   },
   {
     id: 2,
@@ -35,17 +36,35 @@ export const projectData = [
       "Adaptive Chatbot",
       "Booking System",
     ],
-    techStack: ["NodeJs", "MySql", "ReactJs", "SCSS", "PHP Mailer", "Panoee"],
+    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer", "Panoee"],
   },
 
   {
     id: 3,
+    name: "SHEEP",
+    developer: "Ian Castillo",
+    description:
+      "Irosin General Hospital Appointment System is a web app with an appointment system and hospital updates for a seamless healthcare experience.",
+    image: sheep,
+    features: [
+      "News Feed",
+      "Chat System",
+      "Verse Story",
+      "Testimony",
+      "Friend Suggestion",
+      "Event",
+      "Church Group",
+    ],
+    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer"],
+  },
+  {
+    id: 4,
     name: "IGH Appointment System",
     developer: "Ian Castillo",
     description:
       "Irosin General Hospital Appointment System is a web app with an appointment system and hospital updates for a seamless healthcare experience.",
     image: ighImage,
     features: ["Appointment System", "Hospital News Update"],
-    techStack: ["PHP", "MySql", "ReactJs", "SCSS", "PHP Mailer"],
+    techStack: ["PHP", "MySql", "React", "SCSS", "PHP Mailer"],
   },
 ];
