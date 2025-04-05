@@ -44,7 +44,7 @@ export const projectData = [
     name: "SHEEP",
     developer: "Ian Castillo",
     description:
-      "Irosin General Hospital Appointment System is a web app with an appointment system and hospital updates for a seamless healthcare experience.",
+      "SHEEP is a social media platform designed for Christians, providing a space to share faith-based stories, testimonies, and connect with fellow believers. With features like a news feed, chat system, verse sharing, and church group interactions, it fosters a supportive online Christian community.",
     image: sheep,
     features: [
       "News Feed",
