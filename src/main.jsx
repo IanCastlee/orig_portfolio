@@ -6,8 +6,6 @@ import { DarkmodeProvider } from "./context/Darkmode.jsx";
 
 createRoot(document.getElementById("root")).render(
   <DarkmodeProvider>
-    <StrictMode>
-      <App />
-    </StrictMode>
+    <App />
   </DarkmodeProvider>
 );

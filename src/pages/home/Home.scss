@@ -742,13 +742,15 @@
           width: 100%;
           display: flex;
           justify-content: space-between;
-          padding: 23px 10px;
+          padding: 15px 10px;
           border-bottom: 0.0005rem solid var(--border-color);
 
           .name-position {
             display: flex;
             flex-direction: column;
-            margin-top: 17px;
+            margin-top: 0;
+            justify-content: center;
+            align-items: center;
             width: 50%;
 
             .name {
