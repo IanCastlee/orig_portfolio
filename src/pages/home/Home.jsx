@@ -118,12 +118,14 @@ const Home = () => {
               </div>
             </div>
 
-            <img
-              src={ppImage}
-              alt=""
-              className="profile-img"
-              onClick={() => setViewProfie(true)}
-            />
+            <div className="profile-img-wrapper">
+              <img
+                src={ppImage}
+                alt=""
+                className="profile-img"
+                onClick={() => setViewProfie(true)}
+              />
+            </div>
 
             <div className="profile-info">
               <div className="name-position">
