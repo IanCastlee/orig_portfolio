@@ -29,7 +29,7 @@ const Techskill = () => {
           <li>Tailwind</li>
         </ul>
 
-        <span className="title">Other</span>
+        <span className="title">Extra</span>
         <ul>
           <li>Github</li>
           <li>Postman</li>
