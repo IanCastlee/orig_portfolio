@@ -442,14 +442,11 @@
           background-color: var(--mian-bg-color);
 
           .profile-img {
-            //  position: absolute;
             height: 100%;
             width: 100%;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--dark-text-color);
-            //  left: 60px;
-            //  bottom: -100px;
           }
         }
 

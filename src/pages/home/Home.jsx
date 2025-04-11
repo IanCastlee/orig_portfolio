@@ -24,7 +24,6 @@ import reactJs from "../../assets/icons/7423888_react_react native_icon.png";
 import mysql from "../../assets/icons/1012821_code_development_logo_mysql_icon.png";
 import tailwind from "../../assets/icons/tailwind-removebg-preview.png";
 import scss from "../../assets/icons/4375066_logo_sass_icon.png";
-import html from "../../assets/icons/317755_badge_html_html5_achievement_award_icon.png";
 import Techskill from "../../components/tech_skill/Techskill";
 import { DarkModeContext } from "../../context/Darkmode";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
@@ -190,6 +189,9 @@ const Home = () => {
 
           <div className="cotent-container">
             <div className="left">
+              <Experience />
+              <Techskill />
+
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -238,9 +240,6 @@ const Home = () => {
                   </span>
                 </div>
               </motion.div>
-
-              <Experience />
-              <Techskill />
             </div>
 
             <Post />
