@@ -12,7 +12,7 @@ const Experience = () => {
       className="experience"
     >
       <h3>
-        <FaLaptopCode className="about-icon" /> Experience
+        <FaLaptopCode className="about-icon" /> Career Timeline
       </h3>
 
       <div className="container">
@@ -24,7 +24,7 @@ const Experience = () => {
             >
               2025
             </button>
-            <span>{`Preparing to seek job opportunities in companies that align with my skills.`}</span>
+            <span>{`Completed my OJT at DevOpt as a Website Designer. Now preparing to seek job opportunities in companies that align with my skills.`}</span>
           </div>
           <div className="section">
             <button className="year">2024</button>
