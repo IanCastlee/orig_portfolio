@@ -2,7 +2,7 @@ import "./Home.scss";
 import { motion } from "framer-motion";
 
 //IMAGES
-import ppImage from "../../assets/481679951_1560361091339380_5946198632888596042_n.jpg";
+import ppImage from "../../assets/project_images/profile.jpg";
 
 //ICONS
 import { FaGithub } from "react-icons/fa";
@@ -203,18 +203,17 @@ const Home = () => {
                 </h3>
 
                 <p>
-                  I am a fourth-year college student graduating with a
-                  Bachelor's degree in Information Technology, specializing in
-                  Full Stack Web Development. I have a strong foundation in
-                  building fully functional web applications from scratch.
-                  Throughout my college years, I gained hands-on experience as a
-                  freelancer, developing capstone projects, simple websites, and
-                  portfolios for clients. These experiences have enhanced my
-                  technical skills and strengthened my ability to meet diverse
-                  requirements and deadlines. I am passionate about transforming
-                  ideas into efficient and scalable web solutions, and I am
-                  eager to continue learning and growing in the ever-evolving
-                  tech industry.
+                  I am a graduate with a Bachelor's degree in Information
+                  Technology, specializing in Full Stack Web Development. I have
+                  a strong foundation in building fully functional web
+                  applications from scratch. During my college years, I gained
+                  hands-on experience as a freelancer, developing capstone
+                  projects, simple websites, and portfolios for clients. These
+                  experiences enhanced my technical skills and strengthened my
+                  ability to meet diverse requirements and deadlines. I am
+                  passionate about transforming ideas into efficient and
+                  scalable web solutions, and I am eager to continue learning
+                  and growing in the ever-evolving tech industry.
                 </p>
               </motion.div>
 
