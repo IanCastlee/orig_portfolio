@@ -24,7 +24,7 @@ const Experience = () => {
             >
               2025
             </button>
-            <span>{`Preparing to seek job opportunities in companies that align with my skills in  Node.Js, PHP, React, React Native, MySQL, SCSS, and Tailwind.`}</span>
+            <span>{`Preparing to seek job opportunities in companies that align with my skills.`}</span>
           </div>
           <div className="section">
             <button className="year">2024</button>
