@@ -203,17 +203,17 @@ const Home = () => {
                 </h3>
 
                 <p>
-                  I am a graduate with a Bachelor's degree in Information
+                  I am a fresh graduate with a Bachelor's degree in Information
                   Technology, specializing in Full Stack Web Development. I have
-                  a strong foundation in building fully functional web
-                  applications from scratch. During my college years, I gained
-                  hands-on experience as a freelancer, developing capstone
-                  projects, simple websites, and portfolios for clients. These
-                  experiences enhanced my technical skills and strengthened my
-                  ability to meet diverse requirements and deadlines. I am
-                  passionate about transforming ideas into efficient and
-                  scalable web solutions, and I am eager to continue learning
-                  and growing in the ever-evolving tech industry.
+                  a solid foundation in creating fully functional web
+                  applications from the ground up. During college, I gained
+                  hands-on experience as a freelancer, working on capstone
+                  projects, personal portfolios, and simple websites for
+                  clients. These opportunities helped me strengthen both my
+                  technical skills and my ability to meet diverse requirements
+                  and deadlines. I am passionate about turning ideas into
+                  efficient, user-friendly web solutions and excited to grow and
+                  learn continuously in the fast-paced tech industry.
                 </p>
               </motion.div>
 
