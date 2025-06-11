@@ -79,9 +79,11 @@ const Post = () => {
                       : ""
                   }`}
                   onClick={() => {
-                    setShowCard("visit");
-                    _clickedID(project.id);
-                    handleShowMessage();
+                    if (project.url && project.url.trim() !== "") {
+                      window.open(project.url, "_blank");
+                    } else {
+                      handleShowMessage();
+                    }
                   }}
                 >
                   <IoEyeOutline className="view-icon" /> Visit Site

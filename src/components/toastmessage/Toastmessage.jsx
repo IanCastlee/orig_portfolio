@@ -9,7 +9,7 @@ const Toastmessage = () => {
       transition={{ duration: 0.6 }}
       className="toast-message"
     >
-      <p>Not Available for Now</p>
+      <p>The website's domain has expired or is not available.</p>
     </motion.div>
   );
 };

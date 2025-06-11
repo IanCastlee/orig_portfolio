@@ -28,7 +28,7 @@
     border-radius: 5px;
     position: fixed;
     top: 5%;
-    left: 40%;
+    left: 30%;
     transform: translate(-50%, -50%);
     z-index: 999;
 
@@ -45,21 +45,23 @@
 @media (max-width: 768px) {
   .toast-message {
     background-color: #3674b5;
-    width: fit-content;
+    width: 70%;
     padding: 5px 10px;
     border-radius: 5px;
     position: fixed;
     top: 5%;
-    left: 30%;
+    left: 17%;
     transform: translate(-50%, -50%);
     z-index: 999;
+    max-width: 70%;
 
     p {
       color: #fff;
       font-size: 14px;
       font-weight: 300;
       display: flex;
-      white-space: nowrap;
+      white-space: wrap;
+      text-align: center;
     }
   }
 }

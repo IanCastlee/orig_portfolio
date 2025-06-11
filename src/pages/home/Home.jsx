@@ -153,11 +153,8 @@ const Home = () => {
                 className="socmed-button"
               >
                 <div className="socmed">
-                  <FaGithub className="icon" onClick={handleShowMessage} />
-                  <FaFacebookMessenger
-                    className="icon"
-                    onClick={handleShowMessage}
-                  />
+                  <FaGithub className="icon" />
+                  <FaFacebookMessenger className="icon" />
                 </div>
                 <button className="btn-contact" onClick={handleSendEmail}>
                   Send Email
@@ -182,7 +179,9 @@ const Home = () => {
           <div className="navbar">
             <ul>
               <li onClick={() => scrollToSection("stack")}>Tech Stack</li>
-              <li onClick={() => scrollToSection("experience")}>Experience</li>
+              <li onClick={() => scrollToSection("experience")}>
+                Career Timeline
+              </li>
               <li onClick={() => scrollToSection("project")}>Projects</li>
             </ul>
           </div>
