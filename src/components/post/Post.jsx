@@ -1,5 +1,7 @@
 import "./Post.scss";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 //ICONS
 import { CgWebsite } from "react-icons/cg";
@@ -141,7 +143,12 @@ const Post = () => {
             </div>
 
             <div className="post-wrapper">
-              <img src={project.image} alt="" />
+              <LazyLoadImage
+                src={project.image}
+                alt="post"
+                effect="blur"
+                className="post-image"
+              />
             </div>
           </motion.div>
         ))}

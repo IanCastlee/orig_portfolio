@@ -27,6 +27,7 @@ import scss from "../../assets/icons/4375066_logo_sass_icon.png";
 import Techskill from "../../components/tech_skill/Techskill";
 import { DarkModeContext } from "../../context/Darkmode";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Home = () => {
   const { toggleTheme, theme, handleShowMessage } = useContext(DarkModeContext);
@@ -118,7 +119,7 @@ const Home = () => {
             </div>
 
             <div className="profile-img-wrapper">
-              <img
+              <LazyLoadImage
                 src={ppImage}
                 alt=""
                 className="profile-img"
