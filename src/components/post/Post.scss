@@ -152,13 +152,14 @@
     .post-wrapper {
       width: 100%;
       position: relative;
+      height: 300px;
 
       .loader-img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 200px;
+        height: 300px;
         background: linear-gradient(135deg, #ddd, #ccc);
         animation: pulse 1.5s infinite ease-in-out;
         z-index: 1;
@@ -178,6 +179,7 @@
 
       .post-image {
         width: 100%;
+        height: 300px;
       }
     }
   }
@@ -333,9 +335,35 @@
 
       .post-wrapper {
         width: 100%;
+        position: relative;
+        height: 250px;
+
+        .loader-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 250px;
+          background: linear-gradient(135deg, #ddd, #ccc);
+          animation: pulse 1.5s infinite ease-in-out;
+          z-index: 1;
+        }
+
+        @keyframes pulse {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
 
         .post-image {
           width: 100%;
+          height: 250px;
         }
       }
     }
