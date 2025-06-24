@@ -11,12 +11,16 @@ import ModalBox from "../modalBox/ModalBox";
 import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/Darkmode";
 
+import placeholderImg from "../../assets/icons/7423888_react_react native_icon.png";
+
 const Post = () => {
   const { handleShowMessage } = useContext(DarkModeContext);
 
   const [showCard, setShowCard] = useState(null);
   const [clickedID, setClickedID] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
   const maxLength = 200;
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
@@ -143,11 +147,21 @@ const Post = () => {
             </div>
 
             <div className="post-wrapper">
-              <LazyLoadImage
+              {/* <LazyLoadImage
                 src={project.image}
+                placeholderSrc={placeholderImg}
                 alt="post"
                 effect="blur"
                 className="post-image"
+              /> */}
+
+              {!loaded && <div className="loader-img"></div>}
+              <img
+                src={project.image}
+                alt="post"
+                className="post-image"
+                style={{ display: loaded ? "block" : "none" }}
+                onLoad={() => setLoaded(true)}
               />
             </div>
           </motion.div>
