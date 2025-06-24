@@ -147,21 +147,14 @@ const Post = () => {
             </div>
 
             <div className="post-wrapper">
-              {/* <LazyLoadImage
+              {!loaded && <div className="loader-img"></div>}
+
+              <LazyLoadImage
                 src={project.image}
-                placeholderSrc={placeholderImg}
+                onLoad={() => setLoaded(true)}
                 alt="post"
                 effect="blur"
                 className="post-image"
-              /> */}
-
-              {!loaded && <div className="loader-img"></div>}
-              <img
-                src={project.image}
-                alt="post"
-                className="post-image"
-                style={{ display: loaded ? "block" : "none" }}
-                onLoad={() => setLoaded(true)}
               />
             </div>
           </motion.div>
