@@ -1,14 +1,17 @@
 import "./FeedBack.scss";
 import { VscFeedback } from "react-icons/vsc";
 import { CiCircleChevRight, CiCircleChevLeft } from "react-icons/ci";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Feedback() {
   const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const handleScroll = (direction) => {
     const container = scrollRef.current;
-    const scrollAmount = 320; // Adjust based on card width + gap
+    const scrollAmount = 320;
 
     if (container) {
       container.scrollBy({
@@ -16,6 +19,23 @@ function Feedback() {
         behavior: "smooth",
       });
     }
+  };
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // scroll speed multiplier
+    scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
@@ -26,7 +46,14 @@ function Feedback() {
       </h3>
 
       <div className="feedback-wrapper">
-        <div className="feedback-content" ref={scrollRef}>
+        <div
+          className="feedback-content"
+          ref={scrollRef}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+        >
           {Array.from({ length: 9 }).map((_, index) => (
             <div className="card" key={index}>
               <div className="name-owner">
