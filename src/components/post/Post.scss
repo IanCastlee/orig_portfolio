@@ -185,6 +185,74 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .post {
+    width: 90%;
+    padding: 12px;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 18px;
+
+      .project-icon {
+        font-size: 1.25rem;
+        margin-right: 5px;
+      }
+    }
+
+    .post-card {
+      padding: 12px;
+      margin-bottom: 25px;
+
+      .post-card-top {
+        flex-direction: row;
+        align-items: flex-start;
+
+        .project-name-icon {
+          width: 50%;
+
+          .h3-project {
+            font-size: 1.125rem;
+          }
+
+          span {
+            font-size: 0.7rem;
+          }
+        }
+
+        .button-wrapper {
+          width: 50%;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          .btn-show {
+            font-size: 0.7rem;
+            padding: 4px 12px;
+          }
+        }
+      }
+
+      .description {
+        padding-top: 15px;
+        p {
+          font-size: 0.875rem;
+        }
+      }
+
+      .post-wrapper {
+        height: 300px;
+
+        .loader-img,
+        .post-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .post {
     // border: 0.0005rem solid rgb(49, 45, 45);
@@ -336,7 +404,7 @@
       .post-wrapper {
         width: 100%;
         position: relative;
-        height: 250px;
+        height: 210px;
 
         .loader-img {
           position: absolute;
@@ -363,7 +431,7 @@
 
         .post-image {
           width: 100%;
-          height: 250px;
+          height: 100%;
         }
       }
     }
