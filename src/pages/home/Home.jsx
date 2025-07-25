@@ -28,6 +28,7 @@ import Techskill from "../../components/tech_skill/Techskill";
 import { DarkModeContext } from "../../context/Darkmode";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Feedback from "../../components/feed/Feedback";
 
 const Home = () => {
   const { toggleTheme, theme, handleShowMessage } = useContext(DarkModeContext);
@@ -238,6 +239,7 @@ const Home = () => {
             <Post />
           </div>
         </div>
+        <Feedback />
 
         <Footer />
       </div>

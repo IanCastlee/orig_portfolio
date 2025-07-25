@@ -1,11 +1,11 @@
 :root {
-  --mian-bg-color: #181c14;
-  --card-bg-color: rgb(49, 45, 45);
-  --border-color: rgb(78, 77, 77);
+  --mian-bg-color: rgb(240, 233, 233);
+  --card-bg-color: #f8f5f5;
+  --border-color: rgb(190, 186, 186);
 
-  --primary-text-color: #ffcfef;
-  --secondary-text-color: #ffcfef;
-  --dark-text-color: gray;
+  --primary-text-color: #181c14;
+  --secondary-text-color: rgb(49, 45, 45);
+  --dark-text-color: rgb(73, 71, 71);
 }
 
 [data-theme="dark"] {
@@ -22,7 +22,7 @@
   --card-bg-color: #f8f5f5;
   --border-color: rgb(190, 186, 186);
 
-  --primary-text-color: #181c14;
+  --primary-text-color: #000;
   --secondary-text-color: rgb(49, 45, 45);
   --dark-text-color: rgb(73, 71, 71);
 }

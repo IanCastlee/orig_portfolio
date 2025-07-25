@@ -21,7 +21,7 @@ const Post = () => {
   const [loaded, setLoaded] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 3;
+  const postsPerPage = 2;
 
   const totalPages = Math.ceil(projectData.length / postsPerPage);
 
@@ -159,13 +159,13 @@ const Post = () => {
 
       <div className="pagination">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
-          ⬅ Previous
+          Previous
         </button>
         <span>
           Page {currentPage} of {totalPages}
         </span>
         <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next ➡
+          Next
         </button>
       </div>
     </div>
