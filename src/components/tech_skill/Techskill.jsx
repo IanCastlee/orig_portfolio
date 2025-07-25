@@ -13,35 +13,44 @@ const Techskill = () => {
       <h3>
         <FaCode className="about-icon" /> Tech Stack
       </h3>
-
       <div className="card">
-        <span className="title">Backend</span>
-        <ul>
-          <li>Node.Js</li>
-          <li>PHP</li>
-          <li>MySql</li>
-        </ul>
+        <section>
+          <span className="title">Backend</span>
+          <ul>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Firebase</li>
+          </ul>
+        </section>
 
-        <span className="title">Frontend</span>
-        <ul>
-          <li>React</li>
-          <li>SCSS</li>
-          <li>Tailwind</li>
-        </ul>
+        <section>
+          <span className="title">Frontend</span>
+          <ul>
+            <li>React</li>
+            <li>React Native</li>
+            <li>Tailwind</li>
+            <li>SCSS</li>
+          </ul>
+        </section>
 
-        <span className="title">Extra</span>
-        <ul>
-          <li>Github</li>
-          <li>Postman</li>
-          <li>PHP Mailer</li>
-          <li>Panoee</li>
-        </ul>
+        <section>
+          <span className="title">Extra</span>
+          <ul>
+            <li>GitHub</li>
+            <li>Postman</li>
+            <li>PHPMailer</li>
+            <li>Panoee</li>
+          </ul>
+        </section>
 
-        <span className="title">My Playground</span>
-        <ul>
-          <li>React Native</li>
-          <li>Laravel</li>
-        </ul>
+        <section>
+          <span className="title">My Playground</span>
+          <ul>
+            <li>Next.js</li>
+            <li>Laravel</li>
+          </ul>
+        </section>
       </div>
     </motion.div>
   );

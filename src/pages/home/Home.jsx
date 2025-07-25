@@ -95,12 +95,6 @@ const Home = () => {
                   src={tailwind}
                   alt=""
                 />
-                {/* <img
-                  onMouseEnter={() => setHover("html")}
-                  onMouseLeave={() => setHover("")}
-                  src={html}
-                  alt=""
-                /> */}
               </motion.div>
 
               <div className="togglebutton-wrapper" onClick={toggleTheme}>
@@ -143,7 +137,7 @@ const Home = () => {
                   transition={{ duration: 0.5 }}
                   className="position"
                 >
-                  Fullstack Web Developer
+                  Web and Mobile App Developer
                 </motion.span>
               </div>
 
