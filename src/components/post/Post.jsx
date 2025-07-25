@@ -15,11 +15,27 @@ import placeholderImg from "../../assets/icons/7423888_react_react native_icon.p
 
 const Post = () => {
   const { handleShowMessage } = useContext(DarkModeContext);
-
   const [showCard, setShowCard] = useState(null);
   const [clickedID, setClickedID] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [loaded, setLoaded] = useState(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 3;
+
+  const totalPages = Math.ceil(projectData.length / postsPerPage);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentProjects = projectData.slice(indexOfFirstPost, indexOfLastPost);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) setCurrentPage((prev) => prev - 1);
+  };
 
   const maxLength = 200;
   const toggleReadMore = () => {
@@ -36,129 +52,122 @@ const Post = () => {
         <CgWebsite className="project-icon" />
         Some of My Projects
       </h3>
-      {projectData &&
-        projectData.map((project) => (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="post-card"
-            key={project.id}
-          >
-            <div className="post-card-top">
-              <div className="project-name-icon">
-                <h3 className="h3-project">{project.name}</h3>
-                <span>Developed by : {project.developer}</span>
-              </div>
 
-              <div className="button-wrapper">
-                <button
-                  className={`btn-show ${
-                    showCard === "feature" && clickedID === project.id
-                      ? "feature"
-                      : ""
-                  }`}
-                  onClick={() => {
-                    setShowCard("feature");
-                    _clickedID(project.id);
-                  }}
-                >
-                  <IoEyeOutline className="view-icon" /> Features
-                </button>
-                <button
-                  className={`btn-show ${
-                    showCard === "techused" && clickedID === project.id
-                      ? "techused"
-                      : ""
-                  }`}
-                  onClick={() => {
-                    setShowCard("techused");
-                    _clickedID(project.id);
-                  }}
-                >
-                  <IoEyeOutline className="view-icon" /> Tech Stack & Tools
-                </button>
-                <button
-                  className={`btn-show ${
-                    showCard === "visit" && clickedID === project.id
-                      ? "visit"
-                      : ""
-                  }`}
-                  onClick={() => {
-                    if (project.url && project.url.trim() !== "") {
-                      window.open(project.url, "_blank");
-                    } else {
-                      handleShowMessage();
-                    }
-                  }}
-                >
-                  <IoEyeOutline className="view-icon" /> Visit Site
-                </button>
-
-                {showCard != "visit" && clickedID === project.id && (
-                  <ModalBox
-                    clicked={showCard}
-                    features={project.features}
-                    techstack={project.techStack}
-                  />
-                )}
-                {showCard != "visit" && clickedID === project.id && (
-                  <div
-                    className="modal-box-overlay"
-                    onClick={() => {
-                      setShowCard(null);
-                      setClickedID(null);
-                    }}
-                  ></div>
-                )}
-              </div>
+      {currentProjects.map((project) => (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="post-card"
+          key={project.id}
+        >
+          <div className="post-card-top">
+            <div className="project-name-icon">
+              <h3 className="h3-project">{project.name}</h3>
+              <span>Developed by : {project.developer}</span>
             </div>
 
-            <div className="description">
-              {/* By default, `isExpand` is set to `false`.  
-   First, it checks `isExpand ?` (meaning, if `isExpand` is `true`),  
-   if YES, it displays `project.description`.  
-   However, since the default state of `isExpand` is `false`,  
-   it moves to the ELSE (`:`) condition.  
+            <div className="button-wrapper">
+              <button
+                className={`btn-show ${
+                  showCard === "feature" && clickedID === project.id
+                    ? "feature"
+                    : ""
+                }`}
+                onClick={() => {
+                  setShowCard("feature");
+                  _clickedID(project.id);
+                }}
+              >
+                <IoEyeOutline className="view-icon" /> Features
+              </button>
+              <button
+                className={`btn-show ${
+                  showCard === "techused" && clickedID === project.id
+                    ? "techused"
+                    : ""
+                }`}
+                onClick={() => {
+                  setShowCard("techused");
+                  _clickedID(project.id);
+                }}
+              >
+                <IoEyeOutline className="view-icon" /> Tech Stack & Tools
+              </button>
+              <button
+                className={`btn-show ${
+                  showCard === "visit" && clickedID === project.id
+                    ? "visit"
+                    : ""
+                }`}
+                onClick={() => {
+                  if (project.url && project.url.trim() !== "") {
+                    window.open(project.url, "_blank");
+                  } else {
+                    handleShowMessage();
+                  }
+                }}
+              >
+                <IoEyeOutline className="view-icon" /> Visit Site
+              </button>
 
-   In the ELSE condition, `project.description` is sliced from index `0` to `maxLength`,  
-   and `"..."` is added at the end **only if** `project.description.length` is greater than `maxLength`.  
-   Otherwise, an empty string (`""`) is added.  
-
-   In the `toggle` function, when the user clicks the button,  
-   it switches `isExpand` between `true` and `false`.  
-   If `isExpand` is `true`, it displays "READ LESS".  
-   If `isExpand` is `false`, it displays "READ MORE". 
-*/}
-
-              {/* NOTE FOR MY FRIEND hahahhahahahhhhhhhhhhhhhhhhhhhhhhhh */}
-
-              <p>
-                {isExpanded
-                  ? project.description
-                  : project.description.slice(0, maxLength) +
-                    (project.description.length > maxLength ? "..." : "")}
-              </p>
-              {project.description.length > maxLength && (
-                <p onClick={toggleReadMore} className="read-more-btn">
-                  {isExpanded ? "Read Less" : "Read More"}
-                </p>
+              {showCard != "visit" && clickedID === project.id && (
+                <ModalBox
+                  clicked={showCard}
+                  features={project.features}
+                  techstack={project.techStack}
+                />
+              )}
+              {showCard != "visit" && clickedID === project.id && (
+                <div
+                  className="modal-box-overlay"
+                  onClick={() => {
+                    setShowCard(null);
+                    setClickedID(null);
+                  }}
+                ></div>
               )}
             </div>
+          </div>
 
-            <div className="post-wrapper">
-              {!loaded && <div className="loader-img"></div>}
+          <div className="description">
+            <p>
+              {isExpanded
+                ? project.description
+                : project.description.slice(0, maxLength) +
+                  (project.description.length > maxLength ? "..." : "")}
+            </p>
+            {project.description.length > maxLength && (
+              <p onClick={toggleReadMore} className="read-more-btn">
+                {isExpanded ? "Read Less" : "Read More"}
+              </p>
+            )}
+          </div>
 
-              <LazyLoadImage
-                src={project.image}
-                onLoad={() => setLoaded(true)}
-                alt="post"
-                effect="blur"
-                className="post-image"
-              />
-            </div>
-          </motion.div>
-        ))}
+          <div className="post-wrapper">
+            {!loaded && <div className="loader-img"></div>}
+            <LazyLoadImage
+              src={project.image}
+              onLoad={() => setLoaded(true)}
+              alt="post"
+              effect="blur"
+              className="post-image"
+            />
+          </div>
+        </motion.div>
+      ))}
+
+      <div className="pagination">
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+          ⬅ Previous
+        </button>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next ➡
+        </button>
+      </div>
     </div>
   );
 };
