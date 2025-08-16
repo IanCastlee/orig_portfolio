@@ -21,7 +21,7 @@ const Post = () => {
   const [loaded, setLoaded] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 4;
 
   const totalPages = Math.ceil(projectData.length / postsPerPage);
 
