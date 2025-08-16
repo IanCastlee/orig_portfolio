@@ -1,105 +1,71 @@
 @import url("../../main.scss");
 
 .techskill {
+  padding: 2rem;
   border: 0.0005rem solid var(--border-color);
+  background-color: var(--card-bg-color);
   border-radius: 10px;
   padding: 15px;
-  width: 100%;
-
-  background-color: var(--card-bg-color);
 
   h3 {
     color: var(--primary-text-color);
     display: flex;
     align-items: center;
     font-weight: 500;
+    margin-bottom: 25px;
     font-size: 0.875rem;
 
-    .about-icon {
+    .project-icon {
       font-size: 1.125rem;
       margin-right: 3px;
-      color: var(--primary-text-color);
     }
   }
-
   .card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
 
+  section {
     .title {
-      font-size: 0.75rem;
-      color: var(--primary-text-color);
-
-      font-weight: 400;
-      margin-bottom: 3px;
+      font-weight: 500;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      display: block;
+      color: var(--secondary-text-color);
     }
 
     ul {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      margin-bottom: 8px;
+      list-style: none;
+      padding: 0;
+
       li {
-        list-style: none;
-        padding: 0 8px;
-        border-radius: 25px;
-        font-size: 0.625rem;
-        border: 0.0005rem solid var(--border-color);
-        color: var(--primary-text-color);
-      }
-    }
-  }
-}
+        margin-bottom: 1rem;
 
-@media (max-width: 789px) {
-  .techskill {
-    border: 0.0005rem solid var(--border-color);
-    border-radius: 10px;
-    padding: 15px;
-    width: 100%;
-
-    background-color: var(--card-bg-color);
-
-    h3 {
-      color: var(--primary-text-color);
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      font-size: 0.875rem;
-
-      .about-icon {
-        font-size: 1.125rem;
-        margin-right: 3px;
-      }
-    }
-
-    .card {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-
-      .title {
-        font-size: 0.75rem;
-        color: var(--primary-text-color);
-        font-weight: 400;
-        margin-bottom: 3px;
-      }
-
-      ul {
-        display: flex;
-        align-items: center;
-        gap: 3px;
-        margin-bottom: 8px;
-        li {
-          list-style: none;
-          padding: 0 8px;
-          border-radius: 25px;
-          font-size: 0.625rem;
-          border: 0.0005rem solid var(--border-color);
+        .skill-label {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.75rem;
+          margin-bottom: 0.3rem;
           color: var(--primary-text-color);
+
+          span {
+            font-size: 0.75rem;
+          }
+        }
+
+        .progress-bar {
+          background: #e0e0e0;
+          height: 10px;
+          border-radius: 5px;
+          overflow: hidden;
+
+          .progress-fill {
+            background: #4caf50;
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.6s ease-in-out;
+          }
         }
       }
     }

@@ -2,6 +2,31 @@ import "./Techskill.scss";
 import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
 
+const skills = {
+  Backend: [
+    { name: "Node.js", level: 60 },
+    { name: "PHP", level: 75 },
+    { name: "MySQL", level: 70 },
+    { name: "Firebase", level: 65 },
+  ],
+  Frontend: [
+    { name: "React", level: 85 },
+    { name: "React Native", level: 78 },
+    { name: "Tailwind", level: 80 },
+    { name: "SCSS", level: 90 },
+  ],
+  Extra: [
+    { name: "GitHub", level: 80 },
+    { name: "Postman", level: 80 },
+    { name: "PHPMailer", level: 60 },
+    { name: "Panoee", level: 70 },
+  ],
+  "My Playground": [
+    { name: "Next.js", level: 50 },
+    { name: "Laravel", level: 50 },
+  ],
+};
+
 const Techskill = () => {
   return (
     <motion.div
@@ -13,44 +38,29 @@ const Techskill = () => {
       <h3>
         <FaCode className="about-icon" /> Tech Stack
       </h3>
+
       <div className="card">
-        <section>
-          <span className="title">Backend</span>
-          <ul>
-            <li>Node.js</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>Firebase</li>
-          </ul>
-        </section>
-
-        <section>
-          <span className="title">Frontend</span>
-          <ul>
-            <li>React</li>
-            <li>React Native</li>
-            <li>Tailwind</li>
-            <li>SCSS</li>
-          </ul>
-        </section>
-
-        <section>
-          <span className="title">Extra</span>
-          <ul>
-            <li>GitHub</li>
-            <li>Postman</li>
-            <li>PHPMailer</li>
-            <li>Panoee</li>
-          </ul>
-        </section>
-
-        <section>
-          <span className="title">My Playground</span>
-          <ul>
-            <li>Next.js</li>
-            <li>Laravel</li>
-          </ul>
-        </section>
+        {Object.entries(skills).map(([category, skillList]) => (
+          <section key={category}>
+            <span className="title">{category}</span>
+            <ul>
+              {skillList.map((skill) => (
+                <li key={skill.name}>
+                  <div className="skill-label">
+                    <span>{skill.name}</span>
+                    <span>{skill.level}%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div
+                      className="progress-fill"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
     </motion.div>
   );
