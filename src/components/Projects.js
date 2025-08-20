@@ -1,8 +1,8 @@
-import projectImage from "../assets/project_images/bulusanlakeweb.png";
+import projectImage from "../assets/project_images/blsn.png";
 import ighImage from "../assets/project_images/Subheading (9).pnghh.png";
 import paubraImage from "../assets/project_images/pubra_project.png";
 import sheep from "../assets/project_images/sheepproj.png";
-import vetcare from "../assets/project_images/vetcare4.png";
+import vetcare from "../assets/project_images/vetsmgic.png";
 
 export const projectData = [
   {
