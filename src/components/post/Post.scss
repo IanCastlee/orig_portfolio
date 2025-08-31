@@ -22,6 +22,7 @@
     .project-icon {
       font-size: 1.125rem;
       margin-right: 3px;
+      color: rgb(234, 145, 112);
     }
   }
 
@@ -352,10 +353,7 @@
           margin-top: 10px;
 
           .btn-show {
-            background-color: transparent;
-            border: 1px solid var(--border-color);
             height: auto;
-            color: var(--primary-text-color);
             font-weight: 500;
             cursor: pointer;
             border-radius: 3px;
@@ -363,6 +361,11 @@
             padding: 3px 10px;
             display: flex;
             white-space: nowrap;
+
+            background-color: var(--button);
+            border: 0.0005rem solid var(--border-color);
+            border-radius: 25px;
+            color: #fff;
 
             justify-content: center;
             align-items: center;
@@ -374,7 +377,7 @@
             }
 
             &:hover {
-              background-color: #3674b5;
+              background-color: #1d4a04;
               color: #fff;
 
               .view-icon {
@@ -383,7 +386,7 @@
             }
 
             &.techused {
-              background-color: #3674b5;
+              background-color: #1d4a04;
               color: #fff;
 
               .view-icon {
@@ -391,7 +394,7 @@
               }
             }
             &.feature {
-              background-color: #3674b5;
+              background-color: #1d4a04;
               color: #fff;
 
               .view-icon {
@@ -399,7 +402,7 @@
               }
             }
             &.visit {
-              background-color: #3674b5;
+              background-color: #1d4a04;
               color: #fff;
 
               .view-icon {

@@ -29,9 +29,10 @@ import { DarkModeContext } from "../../context/Darkmode";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Feedback from "../../components/feed/Feedback";
+import { LuSquareArrowOutUpRight } from "react-icons/lu";
 
 const Home = () => {
-  const { toggleTheme, theme, handleShowMessage } = useContext(DarkModeContext);
+  const { toggleTheme, theme } = useContext(DarkModeContext);
   const [viewProfile, setViewProfie] = useState(false);
   const [hoverTech, setHover] = useState("");
 
@@ -42,12 +43,7 @@ const Home = () => {
 
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+
   return (
     <>
       <div className="home" id="home">
@@ -153,7 +149,7 @@ const Home = () => {
                   <FaFacebookMessenger className="icon" />
                 </div>
                 <button className="btn-contact" onClick={handleSendEmail}>
-                  Send Email
+                  Send Email <LuSquareArrowOutUpRight className="email-icon" />
                 </button>
                 <div className="togglebutton-wrapper" onClick={toggleTheme}>
                   {theme === "light" ? (
@@ -170,16 +166,6 @@ const Home = () => {
                 </div>
               </motion.div>
             </div>
-          </div>
-
-          <div className="navbar">
-            <ul>
-              <li onClick={() => scrollToSection("stack")}>Tech Stack</li>
-              <li onClick={() => scrollToSection("experience")}>
-                Career Timeline
-              </li>
-              <li onClick={() => scrollToSection("project")}>Projects</li>
-            </ul>
           </div>
 
           <div className="cotent-container">
