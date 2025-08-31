@@ -2,7 +2,7 @@
 
 .post {
   // border: 0.0005rem solid rgb(49, 45, 45);
-  border: 0.0005rem solid var(--border-color);
+  border: none;
   width: 58%;
   border-radius: 10px;
   padding: 15px;
@@ -26,9 +26,9 @@
   }
 
   .post-card {
-    background-color: var(--mian-bg-color);
+    background-color: var(--border-color);
     width: 100%;
-    border: 0.0005rem solid var(--border-color);
+    border: none;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
@@ -65,10 +65,9 @@
         width: 60%;
 
         .btn-show {
-          background-color: transparent;
           border: 1px solid var(--border-color);
           height: 25px;
-          color: var(--primary-text-color);
+          color: #fff;
           font-weight: 500;
           cursor: pointer;
           border-radius: 3px;
@@ -77,11 +76,14 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: var(--button);
+          border-radius: 25px;
 
           .view-icon {
             color: var(--primary-text-color);
             font-size: 0.875rem;
             margin-right: 5px;
+            color: #fff;
           }
 
           &:hover {
@@ -196,10 +198,10 @@
     button {
       border: 1px solid var(--border-color);
       font-size: 12px;
-      padding: 0 10px;
+      padding: 5px 10px;
       border-radius: 6px;
-      color: var(--primary-text-color);
-      background-color: transparent;
+      color: #fff;
+      background-color: blue;
     }
     span {
       font-size: 12px;
@@ -284,7 +286,7 @@
 @media (max-width: 768px) {
   .post {
     // border: 0.0005rem solid rgb(49, 45, 45);
-    border: 0.0005rem solid var(--border-color);
+    border: none;
     width: 100%;
     border-radius: 10px;
     padding: 10px 5px;
@@ -306,7 +308,6 @@
     }
 
     .post-card {
-      background-color: var(--mian-bg-color);
       width: 100%;
       border: 0.0005rem solid var(--border-color);
       border-radius: 10px;
@@ -314,6 +315,7 @@
       margin-bottom: 10px;
       max-height: fit-content;
       height: fit-content;
+      background-color: var(--border-color);
 
       .post-card-top {
         width: 100%;

@@ -20,7 +20,7 @@ const Experience = () => {
         <div className="line">
           <div className="section">
             <button
-              style={{ backgroundColor: "#3674B5", color: "#fff" }}
+              style={{ backgroundColor: "blue", color: "#fff" }}
               className="year"
             >
               2025

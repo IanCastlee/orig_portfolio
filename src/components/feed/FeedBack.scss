@@ -4,6 +4,7 @@
   border: 0.0005rem solid var(--border-color);
   margin-top: 10px;
   border-radius: 10px;
+  background-color: var(--card-bg-color);
 
   .feedback-title {
     color: var(--primary-text-color);
@@ -45,6 +46,7 @@
       transition: transform 0.3s ease;
       background-color: transparent;
       border: 0.0005rem solid var(--border-color);
+      background-color: var(--border-color);
 
       .name-owner {
         span {
