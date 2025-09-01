@@ -25,7 +25,7 @@ const Experience = () => {
             >
               2025
             </button>
-            <span>{`Completed my OJT at DevOpt as a Website Designer. I am now preparing to seek job opportunities at companies that align with my skills.
+            <span>{`Completed my OJT at DevOpt as a Website Designer and graduated from Veritas College of Irosin.
 `}</span>
           </div>
           <div className="section">

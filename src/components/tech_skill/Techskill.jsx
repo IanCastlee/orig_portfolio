@@ -1,29 +1,94 @@
 import "./Techskill.scss";
 import { motion } from "framer-motion";
-import { FaCode } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+import { FaCode, FaLaravel, FaPhp, FaReact, FaSass } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+import { IoLogoNodejs } from "react-icons/io";
+import { IoMailOutline } from "react-icons/io5";
+import { RiNextjsLine, RiTailwindCssLine } from "react-icons/ri";
+import { SiFirebase, SiPostman } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+
+const IconComponent = ({ icon: Icon, color }) => {
+  return <Icon color={color} />;
+};
 
 const skills = {
   Backend: [
-    { name: "Node.js", level: 60 },
-    { name: "PHP", level: 75 },
-    { name: "MySQL", level: 70 },
-    { name: "Firebase", level: 65 },
+    {
+      name: "Node.js",
+      yearExp: "1 year+",
+      icon: <IconComponent icon={IoLogoNodejs} color="green" />,
+    },
+    {
+      name: "PHP",
+      yearExp: "3 years+",
+      icon: <IconComponent icon={FaPhp} color="blue" />,
+    },
+    {
+      name: "MySQL",
+      yearExp: "3 years+",
+      icon: <IconComponent icon={DiMysql} color="blue" />,
+    },
+    {
+      name: "Firebase",
+      yearExp: "4 months",
+      icon: <IconComponent icon={SiFirebase} color="gold" />,
+    },
   ],
   Frontend: [
-    { name: "React", level: 85 },
-    { name: "React Native", level: 78 },
-    { name: "Tailwind", level: 80 },
-    { name: "SCSS", level: 90 },
+    {
+      name: "React",
+      yearExp: "2 years+",
+      icon: <IconComponent icon={FaReact} color="teal" />,
+    },
+    {
+      name: "React Native",
+      yearExp: "8 months",
+      icon: <IconComponent icon={TbBrandReactNative} color="teal" />,
+    },
+    {
+      name: "Tailwind",
+      yearExp: "3 months",
+      icon: <IconComponent icon={RiTailwindCssLine} color="blue" />,
+    },
+    {
+      name: "SCSS",
+      yearExp: "1.5 years+",
+      icon: <IconComponent icon={FaSass} color="pink" />,
+    },
   ],
   Extra: [
-    { name: "GitHub", level: 80 },
-    { name: "Postman", level: 80 },
-    { name: "PHPMailer", level: 60 },
-    { name: "Panoee", level: 70 },
+    {
+      name: "GitHub",
+      yearExp: "1 year+",
+      icon: <IconComponent icon={FiGithub} color="violet" />,
+    },
+    {
+      name: "Postman",
+      yearExp: "1 year+",
+      icon: <IconComponent icon={SiPostman} color="red" />,
+    },
+    {
+      name: "PHPMailer",
+      yearExp: "1 year+",
+    },
+    {
+      name: "Panoee",
+      yearExp: "5 months",
+    },
   ],
   "My Playground": [
-    { name: "Next.js", level: 50 },
-    { name: "Laravel", level: 50 },
+    {
+      name: "Next.js",
+      yearExp: "2 months",
+      icon: <IconComponent icon={RiNextjsLine} color="blue" />,
+    },
+    {
+      name: "Laravel",
+      yearExp: "1 month",
+      icon: <IconComponent icon={FaLaravel} color="red" />,
+    },
   ],
 };
 
@@ -43,22 +108,16 @@ const Techskill = () => {
         {Object.entries(skills).map(([category, skillList]) => (
           <section key={category}>
             <span className="title">{category}</span>
-            <ul>
+            <div className="skill-card">
               {skillList.map((skill) => (
-                <li key={skill.name}>
-                  <div className="skill-label">
-                    <span>{skill.name}</span>
-                    <span>{skill.level}%</span>
+                <div className="skill-capsule">
+                  <div className="name-icon">
+                    {skill.icon} <span>{skill.name}</span>
                   </div>
-                  <div className="progress-bar">
-                    <div
-                      className="progress-fill"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </li>
+                  <span className="exp">({skill.yearExp})</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
         ))}
       </div>
