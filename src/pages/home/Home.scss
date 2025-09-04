@@ -294,6 +294,13 @@
     }
   }
 }
+
+.buttonAi {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+}
 .view-profile-image {
   position: fixed;
   left: 0;

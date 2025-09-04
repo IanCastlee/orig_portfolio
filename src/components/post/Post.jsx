@@ -11,8 +11,6 @@ import ModalBox from "../modalBox/ModalBox";
 import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/Darkmode";
 
-import placeholderImg from "../../assets/icons/7423888_react_react native_icon.png";
-
 const Post = () => {
   const { handleShowMessage } = useContext(DarkModeContext);
   const [showCard, setShowCard] = useState(null);

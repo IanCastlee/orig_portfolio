@@ -30,11 +30,13 @@ import { WiMoonWaxingCrescent4 } from "react-icons/wi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Feedback from "../../components/feed/Feedback";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import Chatbot from "../../components/chatbot/Chatbot";
 
 const Home = () => {
   const { toggleTheme, theme } = useContext(DarkModeContext);
   const [viewProfile, setViewProfie] = useState(false);
   const [hoverTech, setHover] = useState("");
+  const [showChatbot, setShowChatbot] = useState(false);
 
   const handleSendEmail = () => {
     const email = "castillo321ian@gmail.com";
@@ -238,6 +240,12 @@ const Home = () => {
           <img src={ppImage} alt="" />
         </div>
       )}
+
+      <button onClick={() => setShowChatbot(true)} className="buttonAi">
+        ChatBot
+      </button>
+
+      {showChatbot && <Chatbot close={() => setShowChatbot(false)} />}
     </>
   );
 };
