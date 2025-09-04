@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 //IMAGES
 import ppImage from "../../assets/project_images/profile.jpg";
+import aiMessageIcon from "../../assets/icons/text.png";
 
 //ICONS
 import { FaGithub } from "react-icons/fa";
@@ -241,9 +242,14 @@ const Home = () => {
         </div>
       )}
 
-      <button onClick={() => setShowChatbot(true)} className="buttonAi">
-        ChatBot
-      </button>
+      {!showChatbot && (
+        <img
+          onClick={() => setShowChatbot(true)}
+          src={aiMessageIcon}
+          alt="ChatBot"
+          className="buttonAi"
+        />
+      )}
 
       {showChatbot && <Chatbot close={() => setShowChatbot(false)} />}
     </>
