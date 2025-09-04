@@ -28,6 +28,7 @@ function Chatbot({ close }) {
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -36,6 +37,9 @@ function Chatbot({ close }) {
   const handleSend = async () => {
     if (!input.trim()) return;
     setMessages((prev) => [...prev, { role: "user", text: input }]);
+    setInput("");
+
+    setIsTyping(true);
 
     try {
       const genAI = getGenAI();
@@ -113,7 +117,7 @@ Rules for replies:
         ]);
       }
     }
-
+    setIsTyping(false);
     setInput("");
   };
 
@@ -129,10 +133,35 @@ Rules for replies:
 
       <div className="chat-messages">
         {messages.map((msg, i) => (
-          <div key={i} className={`chat-message ${msg.role}`}>
-            <p>{msg.text}</p>
+          <div key={i} className={`chat-message-wrapper ${msg.role}`}>
+            {msg.role === "ai" && (
+              <div className="ai-profile">
+                <img className="ai-image" src={ppImage} alt="ai" />
+                <span>Ian's Assistant</span>
+              </div>
+            )}
+            <div className={`chat-message ${msg.role}`}>
+              <p>{msg.text}</p>
+            </div>
           </div>
         ))}
+
+        {isTyping && (
+          <div className="chat-message-wrapper ai">
+            <div className="ai-profile">
+              <img className="ai-image" src={ppImage} alt="ai" />
+              <span>Ian's Assistant</span>
+            </div>
+            <div className="chat-message ai typing">
+              <div className="dot-typing">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 
