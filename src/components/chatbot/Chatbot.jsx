@@ -29,12 +29,24 @@ function Chatbot({ close }) {
     role: "ai",
     text: "Hello! I’m Ian Castillo’s assistant. Ian is a website and mobile app developer from Bulusan, Sorsogon. He creates websites, mobile apps, and personal portfolios. How can I help you with your project today?",
   };
-  const [messages, setMessages] = useState([initialMessage]);
+
+  // ✅ Load messages from localStorage or default to initialMessage
+  const [messages, setMessages] = useState(() => {
+    const saved = localStorage.getItem("chat_messages");
+    return saved ? JSON.parse(saved) : [initialMessage];
+  });
+
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
   const [imageData, setImageData] = useState(null);
   const [confirmationModal, setConfirmationModal] = useState(false);
+  const [imagePreview, setImagePreview] = useState(null);
+
+  // ✅ Save messages to localStorage on each update
+  useEffect(() => {
+    localStorage.setItem("chat_messages", JSON.stringify(messages));
+  }, [messages]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -64,11 +76,9 @@ function Chatbot({ close }) {
 
     try {
       const genAI = getGenAI();
-
       let result;
 
       if (imageData) {
-        // For images, simple model with description-only instruction
         const imageModel = genAI.getGenerativeModel({
           model: "gemini-1.5-flash",
           systemInstruction: `You are an AI assistant that ONLY describes images clearly and concisely in Filipino.  
@@ -89,7 +99,6 @@ Keep it short and friendly.`,
           },
         ]);
       } else {
-        // For text, use the full Ian assistant instruction
         const textModel = genAI.getGenerativeModel({
           model: "gemini-1.5-flash",
           systemInstruction: `You are Ian Castillo’s professional assistant. 
@@ -135,7 +144,6 @@ Rules for replies:
       }
 
       const aiResponse = result.response.text();
-
       setMessages((prev) => [...prev, { role: "ai", text: aiResponse }]);
     } catch (error) {
       console.error("Error fetching AI response:", error);
@@ -167,36 +175,32 @@ Rules for replies:
     setIsTyping(false);
   };
 
-  const [imagePreview, setImagePreview] = useState(null);
-
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onloadend = () => {
-      const base64 = reader.result.split(",")[1]; // remove data:image/png;base64, prefix
+      const base64 = reader.result.split(",")[1];
       setImageData({ data: base64, type: file.type });
-
-      // Create preview URL for the selected file
       setImagePreview(reader.result);
     };
     reader.readAsDataURL(file);
   };
 
-  // Add a function to remove preview
   const removeImagePreview = () => {
     setImageData(null);
     setImagePreview(null);
   };
 
-  //refresh
+  // ✅ Refresh clears localStorage too
   const handleRefresh = () => {
     setMessages([initialMessage]);
     setInput("");
     setImageData(null);
     setImagePreview(null);
     setConfirmationModal(false);
+    localStorage.removeItem("chat_messages"); // 🔥 Clear localStorage
   };
 
   return (
@@ -211,7 +215,6 @@ Rules for replies:
           <img src={ppImage} alt="profile" />
           <span>Chat with Ian’s Assistant</span>
         </div>
-
         <div className="right">
           <LuRefreshCcw
             onClick={() => setConfirmationModal(true)}
@@ -220,6 +223,7 @@ Rules for replies:
           <IoMdClose className="closeIcon" onClick={close} />
         </div>
       </div>
+
       <div className="chat-messages">
         {messages.map((msg, i) => (
           <div key={i} className={`chat-message-wrapper ${msg.role}`}>
@@ -253,9 +257,9 @@ Rules for replies:
             </div>
           </div>
         )}
-
         <div ref={messagesEndRef} />
       </div>
+
       <div className="chat-input">
         {imagePreview && (
           <div className="image-preview">
@@ -291,6 +295,7 @@ Rules for replies:
           </button>
         </div>
       </div>
+
       {confirmationModal && (
         <div className="confirmation-overlay">
           <motion.div
@@ -303,7 +308,6 @@ Rules for replies:
               Are you sure you want to refresh the chat? This will clear the
               current conversation.
             </p>
-
             <div className="bottom">
               <button onClick={handleRefresh} className="btn-yes">
                 Yes, Refresh

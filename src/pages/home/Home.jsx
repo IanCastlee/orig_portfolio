@@ -32,6 +32,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Feedback from "../../components/feed/Feedback";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 import Chatbot from "../../components/chatbot/Chatbot";
+import { PiDownload } from "react-icons/pi";
 
 const Home = () => {
   const { toggleTheme, theme } = useContext(DarkModeContext);
@@ -45,6 +46,13 @@ const Home = () => {
     const body = encodeURIComponent("Hello, I would like to ask about...");
 
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "../../../public/CASTILLO_RESUME_4.0.pdf";
+    link.download = "CASTILLO_IAN.pdf";
+    link.click();
   };
 
   return (
@@ -110,6 +118,11 @@ const Home = () => {
                   />
                 )}
               </div>
+
+              <button onClick={handleDownload} className="btn-dl-cv">
+                <PiDownload className="dlIcon" />
+                Download CV
+              </button>
             </div>
 
             <div className="profile-img-wrapper">
@@ -243,12 +256,16 @@ const Home = () => {
       )}
 
       {!showChatbot && (
-        <img
-          onClick={() => setShowChatbot(true)}
-          src={aiMessageIcon}
-          alt="ChatBot"
-          className="buttonAi"
-        />
+        <div className="btn-chatbot-wrapper">
+          <img
+            onClick={() => setShowChatbot(true)}
+            src={aiMessageIcon}
+            alt="ChatBot"
+            className="buttonAi"
+          />
+
+          <span>Ask About Ian</span>
+        </div>
       )}
 
       {showChatbot && <Chatbot close={() => setShowChatbot(false)} />}
