@@ -256,13 +256,11 @@ const Home = () => {
       )}
 
       {!showChatbot && (
-        <div className="btn-chatbot-wrapper">
-          <img
-            onClick={() => setShowChatbot(true)}
-            src={aiMessageIcon}
-            alt="ChatBot"
-            className="buttonAi"
-          />
+        <div
+          onClick={() => setShowChatbot(true)}
+          className="btn-chatbot-wrapper"
+        >
+          <img src={aiMessageIcon} alt="ChatBot" className="buttonAi" />
 
           <span>Ask About Ian</span>
         </div>
