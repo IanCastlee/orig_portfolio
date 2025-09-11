@@ -50,9 +50,11 @@ const Home = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "../../../public/CASTILLO_RESUME_4.0.pdf";
+    link.href = "/CASTILLO_RESUME_4.0.pdf";
     link.download = "CASTILLO_IAN.pdf";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   return (
