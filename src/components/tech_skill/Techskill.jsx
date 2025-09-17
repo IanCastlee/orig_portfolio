@@ -17,12 +17,12 @@ const skills = {
   Backend: [
     {
       name: "Node.js",
-      yearExp: "1 year+",
+      yearExp: "3 months+",
       icon: <IconComponent icon={IoLogoNodejs} color="green" />,
     },
     {
       name: "PHP",
-      yearExp: "3 years+",
+      yearExp: "2 years+",
       icon: <IconComponent icon={FaPhp} color="blue" />,
     },
     {
@@ -32,7 +32,7 @@ const skills = {
     },
     {
       name: "Firebase",
-      yearExp: "4 months",
+      yearExp: "2 months",
       icon: <IconComponent icon={SiFirebase} color="gold" />,
     },
   ],
@@ -66,7 +66,7 @@ const skills = {
     },
     {
       name: "Postman",
-      yearExp: "1 year+",
+      yearExp: "3 year+",
       icon: <IconComponent icon={SiPostman} color="red" />,
     },
     {

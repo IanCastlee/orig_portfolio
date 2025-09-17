@@ -50,7 +50,7 @@ const Home = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/CASTILLO_RESUME_4.0.pdf";
+    link.href = "/public/CASTILLO_RESUME_6.0.pdf";
     link.download = "CASTILLO_IAN.pdf";
     document.body.appendChild(link);
     link.click();
@@ -163,8 +163,16 @@ const Home = () => {
                 className="socmed-button"
               >
                 <div className="socmed">
-                  <FaGithub className="icon" />
-                  <FaFacebookMessenger className="icon" />
+                  <a
+                    href="https://github.com/IanCastlee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="icon" />
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <FaFacebookMessenger className="icon" />
+                  </a>
                 </div>
                 <button className="btn-contact" onClick={handleSendEmail}>
                   Send Email <LuSquareArrowOutUpRight className="email-icon" />

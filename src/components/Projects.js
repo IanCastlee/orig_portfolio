@@ -3,28 +3,18 @@ import ighImage from "../assets/project_images/Subheading (9).pnghh.png";
 import paubraImage from "../assets/project_images/pubra_project.png";
 import sheep from "../assets/project_images/sheepproj.png";
 import vetcare from "../assets/project_images/vetsmgic.png";
+import usyuso from "../assets/project_images/usyuso.png";
 
 export const projectData = [
   {
     id: 1,
-    name: "VetCare",
+    name: "Usyuso Mobile App",
     developer: "Ian Castillo",
-    description:
-      "VerCare is a complete online appointment and management system tailored for veterinary clinics with an integrated animal medicine and tools shop. It provides an efficient platform for scheduling pet appointments while offering a seamless experience for both veterinarians and shop owners. Veterinarians have their own dashboard where they can view their appointments for the day, track pending appointments, and stay organized throughout their schedule.For shop owners, VerCare includes a powerful admin panel with graphical analytics that provide detailed insights into product sales, profit trends, and appointment statistics—displayed weekly, monthly, and yearly for easy comparison. The system also features automated notifications for medicines that are low in stock or nearing expiration, ensuring that the inventory is always well-maintained and up to date.Additionally, the platform includes an announcement section for important updates, SMS notifications for appointment reminders and system alerts, and a secure online payment option for client convenience. VerCare is designed to enhance productivity, improve customer service, and simplify day-to-day operations for veterinary professionals and business owners alike.",
-    image: vetcare,
-    features: [
-      "Veterinary appointment scheduling system",
-      "Veterinarian dashboard for daily and pending appointments",
-      "Built-in animal medicine and tools shop",
-      "Admin panel with sales and profit analytics",
-      "Appointment charts (weekly, monthly, yearly)",
-      "Low stock and expiring medicine alerts",
-      "Announcements and updates section",
-      "SMS notifications for reminders and alerts",
-      "Secure online payment support",
-    ],
-    techStack: ["PHP", "MySql", "React", "SCSS", "PHP Mailer", "ClickSend"],
-    url: "https://vetcare4.unaux.com",
+    description: "In progress.....",
+    image: usyuso,
+    features: [""],
+    techStack: ["React Native", "Firebase", "Tailwind"],
+    url: "",
   },
   {
     id: 2,
@@ -43,11 +33,32 @@ export const projectData = [
       "Booking charts (weekly, monthly, yearly)",
       "Secure online payment support",
     ],
-    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer", "Panoee"],
+    techStack: ["Node.Js", "MySql", "React", "SCSS"],
     url: "https://bulusanlakeexplorer.kesug.com",
   },
   {
     id: 3,
+    name: "VetCare",
+    developer: "Ian Castillo",
+    description:
+      "VerCare is a complete online appointment and management system tailored for veterinary clinics with an integrated animal medicine and tools shop. It provides an efficient platform for scheduling pet appointments while offering a seamless experience for both veterinarians and shop owners. Veterinarians have their own dashboard where they can view their appointments for the day, track pending appointments, and stay organized throughout their schedule.For shop owners, VerCare includes a powerful admin panel with graphical analytics that provide detailed insights into product sales, profit trends, and appointment statistics—displayed weekly, monthly, and yearly for easy comparison. The system also features automated notifications for medicines that are low in stock or nearing expiration, ensuring that the inventory is always well-maintained and up to date.Additionally, the platform includes an announcement section for important updates, SMS notifications for appointment reminders and system alerts, and a secure online payment option for client convenience. VerCare is designed to enhance productivity, improve customer service, and simplify day-to-day operations for veterinary professionals and business owners alike.",
+    image: vetcare,
+    features: [
+      "Veterinary appointment scheduling system",
+      "Veterinarian dashboard for daily and pending appointments",
+      "Built-in animal medicine and tools shop",
+      "Admin panel with sales and profit analytics",
+      "Appointment charts (weekly, monthly, yearly)",
+      "Low stock and expiring medicine alerts",
+      "Announcements and updates section",
+      "SMS notifications for reminders and alerts",
+      "Secure online payment support",
+    ],
+    techStack: ["PHP", "MySql", "React", "SCSS"],
+    url: "https://vetcare4.unaux.com",
+  },
+  {
+    id: 4,
     name: "PAUBRA",
     developer: "Ian Castillo",
     description: `Paubra is a web platform designed to connect skilled workers in Bulusan with individuals and businesses in need of their expertise. Whether you're looking for a reliable plumber, carpenter, electrician, or any other skilled professional, Paubra makes it easy to find the right person for the job.
@@ -61,12 +72,12 @@ export const projectData = [
       "Location-Based Matching",
       " Favorites List ",
     ],
-    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer"],
+    techStack: ["Node.Js", "MySql", "React", "SCSS"],
     url: "",
   },
 
   {
-    id: 4,
+    id: 5,
     name: "SHEEP",
     developer: "Ian Castillo",
     description:
@@ -81,18 +92,18 @@ export const projectData = [
       "Event",
       "Church Group",
     ],
-    techStack: ["Node.Js", "MySql", "React", "SCSS", "PHP Mailer"],
+    techStack: ["Node.Js", "MySql", "React", "SCSS"],
     url: "",
   },
   {
-    id: 5,
+    id: 6,
     name: "IGH Appointment System",
     developer: "Ian Castillo",
     description:
       "Irosin General Hospital Appointment System is a web app with an appointment system and hospital updates for a seamless healthcare experience.",
     image: ighImage,
     features: ["Appointment System", "Hospital News Update"],
-    techStack: ["PHP", "MySql", "React", "SCSS", "PHP Mailer"],
+    techStack: ["PHP", "MySql", "React", "SCSS"],
     url: "",
   },
 ];
