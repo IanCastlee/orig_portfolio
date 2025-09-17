@@ -114,6 +114,7 @@ const Techskill = () => {
                   <div className="name-icon">
                     {skill.icon} <span>{skill.name}</span>
                   </div>
+
                   <span className="exp">({skill.yearExp})</span>
                 </div>
               ))}

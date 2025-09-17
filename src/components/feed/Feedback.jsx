@@ -41,58 +41,58 @@ function Feedback() {
   // Random feedback data
   const feedbacks = [
     {
-      name: "Luis Alvin Hermo",
-      role: "Workmate",
+      name: "John Doe",
+      role: "Colleague",
       message:
-        "I had the pleasure of working with Ian on a recent project. His expertise in web development and clean code really helped us deliver on time.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.",
     },
     {
-      name: "Jasmine De Vera",
-      role: "Client - Startup Founder",
+      name: "Jane Smith",
+      role: "Client",
       message:
-        "Ian was instrumental in launching our MVP. He communicates clearly, delivers on time, and exceeds expectations!",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.",
     },
     {
-      name: "Carlos Tan",
-      role: "Workmate",
+      name: "Mark Johnson",
+      role: "Team Member",
       message:
-        "Collaborating with Ian is always smooth. His React skills are sharp, and he always brings innovative solutions to the table.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.",
     },
     {
-      name: "Maria Santos",
-      role: "Client - E-commerce Owner",
+      name: "Emily Davis",
+      role: "Project Partner",
       message:
-        "Ian revamped our entire online store, and our conversion rates increased significantly. Professional and detail-oriented!",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh.",
     },
     {
-      name: "Kevin Mercado",
-      role: "Project Manager",
+      name: "Michael Brown",
+      role: "Manager",
       message:
-        "Ian is the kind of developer every team wants. Reliable, fast, and great at solving complex problems under pressure.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
     },
     {
-      name: "Aira Lim",
-      role: "UX Designer",
+      name: "Olivia Wilson",
+      role: "Designer",
       message:
-        "Working with Ian was a breeze. He translated my Figma designs pixel-perfectly and even improved the responsive behavior.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat.",
     },
     {
-      name: "John Reyes",
-      role: "Client - NGO Director",
+      name: "William Martinez",
+      role: "Client",
       message:
-        "Ian helped build our organization’s website, and it’s now much easier for donors to reach and support us. Amazing job!",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada.",
     },
     {
-      name: "Stephanie Uy",
-      role: "Collab Developer",
+      name: "Sophia Anderson",
+      role: "Developer",
       message:
-        "Code reviews with Ian are insightful and helpful. He pushes the team to follow best practices and clean architecture.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
     },
     {
-      name: "Albert Dela Cruz",
-      role: "Freelance Collaborator",
+      name: "James Taylor",
+      role: "Freelancer",
       message:
-        "We collaborated on a portfolio site, and Ian's front-end wizardry brought everything to life beautifully!",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
     },
   ];
 
