@@ -30,11 +30,11 @@ const Experience = () => {
           </div>
           <div className="section">
             <button className="year">2024</button>
-            <span>{`Worked on my capstone project while also taking on commission work from fellow students (Node.js, PHP, MySQL, ReactJS, SCSS).`}</span>
+            <span>{`Worked on my capstone project while also taking on commission work from fellow students.`}</span>
           </div>
           <div className="section" id="stack">
             <button className="year">2023</button>
-            <span>{`Started my web development journey and began taking web development commissions using Laravel, MySQL, and CSS.`}</span>
+            <span>{`Started my web development journey and began taking web development commissions.`}</span>
           </div>
           <div className="section">
             <button className="year">2022</button>
